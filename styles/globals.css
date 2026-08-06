@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --navy:#0c1c33;
+  --gold:#d99a2b;
+}
+
+body{background:#f6f7f9;color:#111a2b}
+.text-muted{color:#7c8697}
