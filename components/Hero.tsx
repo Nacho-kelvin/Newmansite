@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function Hero(){
   return (
     <section className="bg-navy text-white">
@@ -14,8 +12,8 @@ export default function Hero(){
           </div>
         </div>
         <div className="relative rounded-lg overflow-hidden shadow-lg">
-          {/* use public SVG placeholders so builds don't fail; replace with real WebP/JPG assets later */}
-          <Image src="/images/modified-newman-640.svg" alt="Founder" width={640} height={480} priority />
+          {/* using an external placeholder image to avoid missing local assets */}
+          <img src="https://via.placeholder.com/640x480.png?text=Newman+Electrical" alt="Founder" width={640} height={480} className="w-full h-auto block" />
           <div className="absolute left-4 bottom-4 bg-navy p-4 rounded-md shadow"> 
             <h3 className="font-semibold">Kavehere</h3>
             <p className="text-sm text-muted">Founder & Master Electrician — 14 years</p>
