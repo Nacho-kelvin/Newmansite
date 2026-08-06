@@ -24,11 +24,9 @@
   @media(min-width: 961px){.home-hero-grid{grid-template-columns:1.2fr 0.8fr;gap:50px}}
   .hero-photo{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 24px 50px rgba(0,0,0,0.35)}
   .hero-photo img{width:100%;height:480px;object-fit:cover;object-position:center 15%}
-  .hero-photo-tag{position:absolute;left:12px;bottom:-18px;max-width:250px;background:var(--navy);border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);padding:16px 18px;box-shadow:0 14px 30px rgba(0,0,0,0.35)}
+  .hero-photo-tag{position:absolute;left:12px;bottom:-18px;max-width:250px;background:var(--navy);border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);padding:16px 18px;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
 </style>
 
-<!-- Preload the expected mobile hero WebP (fallback to PNG if WebP not present) -->
-<link rel="preload" as="image" href="/images/modified-newman-640.webp">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -58,7 +56,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <a class="nav-cta" href="tel:+254799337269">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 [...]
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 [...]"/></svg>
       Request a Callout
     </a>
     <button class="burger" aria-label="Open menu" onclick="document.getElementById('mobilePanel').classList.toggle('open')">
@@ -88,13 +86,8 @@
     </div>
     <div class="hero-photo-wrap">
       <div class="hero-photo">
-        <!-- Responsive picture element: WebP preferred, JPG/PNG fallback to existing file -->
-        <picture>
-          <source type="image/webp" srcset="/images/modified-newman-360.webp 360w, /images/modified-newman-640.webp 640w, /images/modified-newman-1024.webp 1024w" sizes="(max-width:560px) 360px, (max-width:960px) 640px, 1024px">
-          <source type="image/jpeg" srcset="/images/modified-newman-360.jpg 360w, /images/modified-newman-640.jpg 640w, /images/modified-newman-1024.jpg 1024w" sizes="(max-width:560px) 360px, (max-width:960px) 640px, 1024px">
-          <!-- Fallback to the existing repo PNG so deploys without the optimized assets still work -->
-          <img src="modified%20newman%20profile.png" alt="Kavehere, Founder and Master Electrician at Newman Electrical Services" width="500" height="480" decoding="async" fetchpriority="high">
-        </picture>
+        <!-- Use the existing PNG asset in the repo as the single responsive hero image to avoid missing /images/* files -->
+        <img src="modified%20newman%20profile.png" alt="Kavehere, Founder and Master Electrician at Newman Electrical Services" width="500" height="480" decoding="async" fetchpriority="high">
       </div>
       <div class="hero-photo-tag">
         <h3 class="name">Kavehere</h3>
