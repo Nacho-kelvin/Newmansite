@@ -33,7 +33,7 @@ export default function Home() {
         <div className="relative">
           <div className="rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/modified-newman-profile.png"
+              src="https://raw.githubusercontent.com/Nacho-kelvin/Newmansite/main/modified%20newman%20profile.png"
               alt="Founder and Master Electrician"
               width={800}
               height={720}
