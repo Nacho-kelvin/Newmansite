@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://newmansite.netlify.app/sitemap.xml
